@@ -14,14 +14,13 @@ protected:
     int dataLength;
 
 public:
-    // Constructor
+    // Default Constructor
     SensorData();
-    // CHECK change timeStamp to unsigned long
+    // Constructor
     SensorData(int id, int* data, int dataLength, unsigned long timeStamp);
-    // CHECK change canMessage to CAN_message_t
+    // Constructor from CAN_message_t
     SensorData(CAN_message_t canMessage);
 
-    // CHECK add destructor
     // Destructor
     ~SensorData();
 
@@ -33,10 +32,10 @@ public:
 
     void setId(int id);
     void setData(int* data);
-    // CHECK allow for setting timestamp
+    // For changing timestamp
     void setTimeStamp(unsigned long timeStamp);
 
-    // CHECK change output to CAN_message_t
+    // Converts SensorData object to a CAN_message_t object
     CAN_message_t formatCAN() const;
     void toString() const;
 };

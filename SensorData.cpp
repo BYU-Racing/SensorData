@@ -43,7 +43,6 @@ SensorData::SensorData(int inId, int* inData, int inDataLength, unsigned long in
     timeStamp = inTimeStamp;
 }
 
-// CHECK: Implement this method
 /**
  * @brief CAN Constructor for SensorData class
  * 
@@ -98,7 +97,6 @@ void SensorData::setTimeStamp(unsigned long inTimeStamp) {
     timeStamp = inTimeStamp;
 }
 
-// TODO: Implement this method
 /**
  * @brief Format the SensorData into a CAN_message_t.
  * 
